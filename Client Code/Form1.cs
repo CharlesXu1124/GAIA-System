@@ -235,7 +235,7 @@ namespace SearchGCS
                     };
                     var satPayload = await Task.Run(() => JsonConvert.SerializeObject(sm));
                     HttpContent content = new StringContent(satPayload, Encoding.UTF8, "application/json");
-                    var url = "http://ec2-54-90-166-180.compute-1.amazonaws.com:5000/getSatellite";
+                    var url = "YOUR AWS API URL";
 
 
                     using (HttpClient weatherClient = new HttpClient())
@@ -343,7 +343,7 @@ namespace SearchGCS
 
 
                     HttpContent weatherPayload = new StringContent(stringPayload, Encoding.UTF8, "application/json");
-                    var urlWeather = "http://ec2-54-90-166-180.compute-1.amazonaws.com:5000/getWeather";
+                    var urlWeather = "YOUR AWS REST API URL";
 
 
 
@@ -439,8 +439,8 @@ namespace SearchGCS
         // Firebase authentication config
         IFirebaseConfig config = new FirebaseConfig
         {
-            AuthSecret = "KyWVqkV3c3R3IfgpKZ6oqbISw2Bb4B607R06j0CR",
-            BasePath = "https://fir-rtc-e5aeb.firebaseio.com/"
+            AuthSecret = "YOUR AUTH SECRET",
+            BasePath = "YOUR FIREBASE BASE PATH"
         };
 
         IFirebaseClient client;
@@ -495,7 +495,7 @@ namespace SearchGCS
             // create a new stopwatch
             stopWatch = new Stopwatch();
             // Create a new SerialPort object with default settings. 
-            comport = new SerialPort("COM5", 921600, Parity.None, 8, StopBits.One);
+            comport = new SerialPort("YOUR COM PORT", 921600, Parity.None, 8, StopBits.One);
             //comport.Open();
             comport.ReadTimeout = 500;
             comport.WriteTimeout = 500;
@@ -542,7 +542,7 @@ namespace SearchGCS
             mapProviders[0] = GMapProviders.GoogleMap;
             mapProviders[3] = GMapProviders.GoogleSatelliteMap;
 
-            GMapProviders.GoogleMap.ApiKey = "AIzaSyBleg8zbo7UUQW0L_VdSrxKD8VxB5Q3BGc";
+            GMapProviders.GoogleMap.ApiKey = "YOUR GOOGLE MAP KEY";
 
             for (int i = 0; i < 4; i++)
             {
@@ -1052,14 +1052,7 @@ namespace SearchGCS
                     
 
                 }
-                /**
-                string text8 = "Diarmed";
-                using (Font font1 = new Font("Arial", 7, FontStyle.Bold, GraphicsUnit.Point))
-                {
-                    RectangleF rectF1 = new RectangleF(70, 110, 40, 10);
-                    g.DrawString(text8, font1, Brushes.Red, rectF1);
-                }
-                */
+                
                 string textF = char.ConvertFromUtf32(0x21D1);
                 string textB = char.ConvertFromUtf32(0x21D3);
                 string textL = char.ConvertFromUtf32(0x21D0);
