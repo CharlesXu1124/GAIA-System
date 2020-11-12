@@ -19,3 +19,6 @@ https://www.youtube.com/watch?v=ei_PRCTbO3w&feature=youtu.be
 ### Video Demo
 
 https://www.youtube.com/watch?v=a7XSZtzq7Bc&feature=youtu.be
+
+#### I have uploaded the key source code which is critical for you to set up the project, for complete source code, please contact the author at:
+#### xuzheyuan961124@gamil.com
